@@ -1,0 +1,7 @@
+sources:
+  - name: raw_data
+    database: retail  
+    schema: raw_data
+    tables:
+      - name: retail_information
+        description: "Source table for retail information data."

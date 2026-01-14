@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: retail_information
+    description: "Bronze layer model for retail information data."
+    columns:
+      - name: name
+        description: "Name of the retail product."
+        data_tests:
+          - unique
+          - not_null
+      - name: price_ron
+        description: "Price of the retail product in RON."
+        data_tests:
+          - not_null
+      - name: url
+        description: "URL of the retail product."
+        data_tests:
+          - not_null
+      - name: scrape_date
+        description: "Date when the product information was scraped."
+        data_tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - name
+            - scrape_date
