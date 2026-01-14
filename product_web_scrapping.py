@@ -5,6 +5,7 @@ from datetime import datetime
 import re
 import time
 from sqlalchemy import create_engine
+import os
 
 
 BASE_URL = "https://www.emag.ro/telefoane-mobile"
@@ -71,8 +72,8 @@ df.to_csv(filename, index=False)
 
 
 
-DB_USER = "postgres"
-DB_PASSWORD = "Acadele12"
+DB_USER = os.getenv("postgres_db_user")
+DB_PASSWORD = os.getenv("postgres_db_password")
 DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "retail"
