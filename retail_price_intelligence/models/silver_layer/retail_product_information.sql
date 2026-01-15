@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table', schema='silver_layer') }}
 
 with source_data as (
 
