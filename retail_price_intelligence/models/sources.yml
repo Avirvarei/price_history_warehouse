@@ -1,0 +1,7 @@
+sources:
+  - name: raw_data
+    database: retail  
+    schema: public
+    tables:
+      - name: emag_phones
+        description: "Source table for emag phones data."

@@ -83,10 +83,10 @@ engine = create_engine(
 )
 
 df.to_sql(
-    name="retail_information",
+    name="emag_phones",
     con=engine,
     if_exists="append",   # important for history
     index=False
 )
 
-pd.read_sql("SELECT * FROM retail.public.retail_information ORDER BY scrape_date DESC LIMIT 5", engine)
+pd.read_sql("SELECT * FROM retail.public.emag_phones ORDER BY scrape_date DESC LIMIT 5", engine)
