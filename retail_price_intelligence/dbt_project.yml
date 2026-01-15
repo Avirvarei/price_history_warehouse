@@ -32,5 +32,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   retail_price_intelligence:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    bronze_layer:
+      +schema: bronze_layer
+      +materialized: table
+    silver_layer:
+      +schema: silver_layer
+      +materialized: table
+    gold_layer:
+      +schema: gold_layer
+      +materialized: table

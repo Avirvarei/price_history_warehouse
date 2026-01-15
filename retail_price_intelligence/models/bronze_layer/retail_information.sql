@@ -6,7 +6,7 @@ with source_data as (
     price_ron,
     url,
     scrape_date
-    from {{ source('raw_data', 'retail_information') }}
+    from {{ source('raw_data', 'emag_phones') }}
 
 )
 
